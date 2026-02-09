@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Handle Angular and other front-end routes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/(.*)$ index.js [L,QSA]
+
+# Set Node.js version (if Hostinger supports it)
+# AddHandler cgi-script .js
